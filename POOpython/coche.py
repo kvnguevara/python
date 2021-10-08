@@ -15,13 +15,31 @@ class Coche():
         #es igual a this, hacer referencia al objeto
         self.__enmarcha=arrancamos
         if(self.__enmarcha):
+            chequeo=self.__chequeo_interno()
+            
+        if(self.__enmarcha and chequeo):
             return "El coche esta en marcha"
+        elif(self.__enmarcha and chequeo==False):
+            return "algo ha ido mal en el chequeo, no podemos arrancar"
         else:
             return "el coche esta parado "
     def estado(self): #Hace referencia a la instancia
         """Funcion donde nos indica la info del coche"""
         print("El coche tiene ",self.__ruedas," ruedas. Un ancho de ", self.__anchoChasis,
               " y un largo de  ",self.__largoChasis)
+    #Meotod para saber que le hace falta en el coche 
+    def __chequeo_interno(self): #Encapsulado de una funcion 
+        """Metodo que nos indica si falta algo, en esto vemos que es una
+        funcion encapsulada, que solo se puede llamar desde la propia clase y no de fuera"""
+        print("Chequeo interno----")
+        self.gasolina ="ok"
+        self.aceite = "ok"
+        self.puertas="cerradas"
+        if (self.gasolina=="ok" and self.aceite=="ok" and self.puertas=="cerradas"):
+            return True
+        else :
+            return False
+        
         
     
 miCoche=Coche()
