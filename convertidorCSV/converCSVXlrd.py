@@ -5,7 +5,7 @@ import pandas as pd
 locExcel= (r"C:\Users\kguevara\Downloads\Libro3.xlsx")
 localCSV = (r"C:\Users\kguevara\Desktop\PruebaCSV\csv\libroPruebas.csv")
   
-excel = openpyxl.load_workbook(locExcel) 
+excel = openpyxl.load_workbook(locExcel, data_only=True) 
   
 sheet = excel.active
   
