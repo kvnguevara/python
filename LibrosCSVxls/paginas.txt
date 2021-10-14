@@ -1,0 +1,3 @@
+https://joserzapata.github.io/courses/python-ciencia-datos/pandas/#metodos-de-strings
+https://es.stackoverflow.com/questions/163376/formateo-de-dataframe-python-pandas
+https://qastack.mx/programming/28986489/how-to-replace-text-in-a-column-of-a-pandas-dataframe
