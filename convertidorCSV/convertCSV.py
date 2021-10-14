@@ -34,10 +34,10 @@ print(df[['fechaProximaEntrevista','fecha_incorporacion']])
 #voy a crear una nueva columma en el dataFrame para agreagar los comentarios
 #que ya están formateados
 #tengo que establecer un patron para que cumpla dichos complementarios:
-list_caracteres = ['.','•','-']
+list_caracteres = ['. ','•','-','.']
 expr_regular='[' +re.escape('\n'.join(list_caracteres))+']'
 
-df['nuevos_comentarios']=
+df['nuevos_comentarios']=df['Resumen_candidato'].replace(list_caracteres,'\n')
 df1 = df['nuevos_comentarios']
 print(df['nuevos_comentarios'])
 print(df)
