@@ -25,17 +25,12 @@ df['fecha_incorporacion']=pd.to_datetime(df['fecha_incorporacion'])
 
 #df.fechaProximaEntrevista = pd.to_datetime(df.fechaProximaEntrevista).strftime(df.fechaProximaEntrevista, '%d/%m/%Y')
 #df.fecha_incorporacion =  datetime.strptime(df['fecha_incorporacion'],'%d/%m/%Y')
-print(df['fechaProximaEntrevista'].dtype)
+""" print(df['fechaProximaEntrevista'].dtype)
 print(df['fecha_incorporacion'].dtype)
-
-
-print(df[['fechaProximaEntrevista','fecha_incorporacion']])
-
-
-
+ """
 
 df['Resumen_candidato'] = df['Resumen_candidato'].str.replace('.', '\n', regex=True)
 #print(df['nuevos_comentarios'])
-print(df['Resumen_candidato'])
 df.to_csv(localCSV,index=False)
+print("Fichero Creado..")
 df
