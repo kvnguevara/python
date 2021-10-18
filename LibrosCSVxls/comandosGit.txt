@@ -47,6 +47,11 @@ Ahora fusionamos upstream/master a la rama maestra nuestra
 	git merge upstream/master
 Enviamos los cambios 
 	git push origin master
+Para borrar la rama 
+	git push origin :<rama_a_borrar>, de forma local
+	git branch -d <rama_a_borrar>
+Para borrar la rama del remoto
+	$ git push origin :test
 	
 
 
