@@ -4,8 +4,8 @@ import pandas as pd
 from datetime import datetime,date
 import openpyxl
 
-locExcel= (r"C:\\Users\\kguevara\\Downloads\\Libro3.xlsx")
-localCSV = (r"C:\Users\kguevara\\Desktop\PruebaCSV\csv\libroPruebas3.csv")
+locExcel= (r"C:\\Users\\kguevara\\Downloads\\LpComentarios.xlsx")
+localCSV = (r"C:\Users\kguevara\\Desktop\PruebaCSV\csv\lppruebas.csv")
 
 dateFormatters ="%d/%m/%Y"
 #formateador = str.format()
@@ -31,16 +31,11 @@ print(df['fecha_incorporacion'].dtype)
 
 print(df[['fechaProximaEntrevista','fecha_incorporacion']])
 
-#voy a crear una nueva columma en el dataFrame para agreagar los comentarios
-#que ya están formateados
-#tengo que establecer un patron para que cumpla dichos complementarios:
-list_caracteres = ['. ','•','-','.']
-expr_regular='[' +re.escape('\n'.join(list_caracteres))+']'
 
-df['nuevos_comentarios']=df['Resumen_candidato'].replace(list_caracteres,'\n')
-df1 = df['nuevos_comentarios']
-print(df['nuevos_comentarios'])
-print(df)
-df1.to_csv(localCSV,index=False)
-df1
+
+
+df['Resumen_candidato'] = df['Resumen_candidato'].str.replace('.', '\n', regex=True)
+#print(df['nuevos_comentarios'])
+print(df['Resumen_candidato'])
+df.to_csv(localCSV,index=False)
 df
