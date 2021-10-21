@@ -1,0 +1,8 @@
+En está clase vamos a serializar los objetos, las colecciones para así poder trabajar con los archivos externos.
+La serializacion, se utiliza para facilitar la distribucion de los datos de python con el exterior
+
+Para ello, vamos a utilizar la biblioteca Pickle, dentro de ellos utilizamos los siguientes métodos:
+----dum(): volcado de datos al fichero binario 
+----load(): carga los datos de un fichero binario
+Para hacer el volcado o escribir en un fichero serializado(binario), utilizamos dump()
+---pickle.dump(lista_nombres,fichero_binario)

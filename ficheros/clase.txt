@@ -1,0 +1,32 @@
+En este modulo vamos a manipular los datos desde fuentes externas, desde ficheros.
+Utilizando los ficheros, a través de ficheros y BBDD, para ello voy a utilizar la libreria en io(IO)
+#tenemos que importa la librería
+# Tenemos que indicar la forma de como vamos abrir el archivo:
+Existen varias formas:
+ 1.Leer
+ 2.Escribir
+ 3.Leer y Escribir
+ 
+
+ Para escribir archivos de Texto:
+ -- archivoTexto = open("archivo.txt","w") w, indica el método para escribir en ficheros
+ -- se utiliza :
+    archivoTexto.write(frase)
+    archivoTexto.close()
+ Para leer archivo texto:
+ -- archivoTexto = open("archivo.txt","r")
+ -- texto = archivo_texto.readlines()--> lee todo el archivo y lo mete todo en una lista y tenemos que mostrar con un for
+ -- para esto utilizamos la iteración
+
+ Para abrir archivo de agregar informacion al archivo, pero sustituyendo la ultima linea o la linea que le indicamos:
+--  archivoTexto = open("archivo.txt","a"), a le indicamos que agregamos info, al final del fichero de archivo
+ siempre hay que cerrar el archivo, se utiliza con archivo.close()
+ Para abrir un fichero de leer y escribir:
+ ---open(fichero.txt, "r+"): el signo +, nos indica que vamos a leer y añadir al ficherp
+
+ Archivos con punteros:
+    Por defecto en python, como otros legnuajes, y podemos decirle y modificar la ubicación del puntero
+    con seek(): le indicamos la posicion de donde se tiene que ubicar el puntero
+Para la creaación de carpetas, mover archivo, cambiar el nombre,etc...
+Tenemos que usar la libreria os 
+OJO: para poder leer, escrbir un archivo es mejor indicamos
