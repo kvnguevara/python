@@ -18,10 +18,11 @@ dicc03 = dict.fromkeys(['a','b','c','d','e','f'],25) #Con dict.fromkeys([keys],v
 print(dicc03)
 #Creando dos duplas en una va la clave y en otra el valor 
 #tupla paises, capital 
-t_pais = ('Francia','Honduras','Mexico','España',)
-t_capital = ('Paris','tegucigalpa','Mexico D.F','Madrid',)
+t_pais = ('Francia','Honduras','Mexico','España')
+t_capital = ('Paris','tegucigalpa','Mexico D.F','Madrid')
+t_todo= zip(t_pais,t_capital)
 
 dico4  =  dict()
 #Creando el diccionario 
-dic04 = dict([t_pais])
+dic04 = dict((t_todo))
 print (dic04)
