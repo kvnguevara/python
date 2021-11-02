@@ -11,9 +11,11 @@ ventana.resizable(True, True) #Para indicar horizaontal, vertical
 # ventana.geometry("640x360")
 ventana.config(bg="#832561")  #Establecer los colores
 frame = Frame()
-frame.pack(side="bottom",anchor="n") #para poder el frame en la izquierda...left,right,bottom
+frame.pack(side="bottom",anchor="s") #para poder el frame en la izquierda...left,right,bottom
 frame.config(bg="white")
 frame.config(width="640",height="360")
+#Etiquetas, botones en python
+
 
 
 
