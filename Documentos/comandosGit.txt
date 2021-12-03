@@ -1,0 +1,57 @@
+Para clonar un repositporio en Git.
+1- Abrir git en la ruta del directorio donde se va hacer
+	cd D:\repositoryPython
+2-Clonar el repositorio de Git 
+	git clone  "ruta: https"
+3- Nos vamos al directorio que ha creado 
+	cd python
+4-Configurar los usarios y correos en Git
+ git config ---global user.name = "user name"
+ git config ---global user.email = "mail usario"
+5- Para saber si hay algun archivo pendiente hacemos un status
+	git status 
+6- Añadir archivos que no se han subido al repositorio 
+	git commit -a -m "Mensaje de referencia"
+6.1- Se puede hacer en dos pasos 
+	git add [Nombre del archivo]
+	git commit -m "mensaje de referencia"
+6.2 Para salvar/ guardar todos los archivos 
+	git add.
+	git commit -m "Mensaje de referencia"
+7 Para subirlos a github
+	git push [nombre remoto] [nombre del branch] 
+	git remote -v -->Para ver el nombre del repositorio remoto 
+8 Para crear una rama y trabajar en ella, tenemos que hacer:
+	nos bajamos el repositorio 
+	git clone "ruta:httsp"
+Luegos nos dirigimos a la ruta del repositorio clonado 
+	cd [Nombre repositorio]
+Crear una rama :
+	$ git checkout -b [Nombre de la Rama]
+	git status -->para ver los archivos bajado,modificados
+	git add . -->añadir todos los camnbios a esa rama 
+	git commit -m "Mensaje"
+subir cambios al remoto
+	git remote -->identifica el repositorio Remoto
+	git push origin(nombre del remoto) [Nombre de la rama]
+Creamos un pull request.
+Sincronizar rama con el repositorio :
+1. Tenemos que ponernos en la rama maestra 
+	git branch --> ver la rama en la que estamos 
+	git checkout master
+Ahora tenemos que fusionar la rama maestra con la rama en la que estabamos trabajando(todo en local)
+	git merge [nombreRama] master
+
+Ahora tenemos que bajar el repositorio como un upstream
+	git remote add upstram [https:"direccion del repositorio]
+Ahora buscamos fecth
+	git fetch upstream
+Ahora fusionamos upstream/master a la rama maestra nuestra
+	git merge upstream/master
+Enviamos los cambios 
+	git push origin master
+	
+
+
+
+
