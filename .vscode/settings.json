@@ -2,5 +2,9 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.codeLensFontFamily": "12",
   "editor.wordWrapColumn": 79,
-  "python.analysis.extraPaths": ["./modulos"]
+  "python.analysis.extraPaths": [
+    "./modulos"
+  ],
+  "debug.javascript.autoAttachFilter": "always",
+  "editor.acceptSuggestionOnCommitCharacter": false
 }
